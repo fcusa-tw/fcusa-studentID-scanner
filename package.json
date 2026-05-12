@@ -1,0 +1,54 @@
+{
+  "name": "fcusa-studentid-scanner",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Reusable React student ID barcode scanner module for FCUSA-related systems.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "build:lib": "rm -rf dist-lib && vite build --config vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "preview": "vite preview --host 0.0.0.0",
+    "prepare": "npm run build:lib"
+  },
+  "dependencies": {
+    "@zxing/browser": "0.2.0",
+    "@zxing/library": "0.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "eslint": "latest",
+    "@eslint/js": "latest",
+    "typescript-eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-refresh": "latest",
+    "globals": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist-lib/types/scanner/index.d.ts",
+      "import": "./dist-lib/fcusa-studentid-scanner.es.js",
+      "require": "./dist-lib/fcusa-studentid-scanner.umd.js"
+    }
+  },
+  "files": [
+    "dist-lib",
+    "README.md"
+  ],
+  "main": "./dist-lib/fcusa-studentid-scanner.umd.js",
+  "module": "./dist-lib/fcusa-studentid-scanner.es.js",
+  "types": "./dist-lib/types/scanner/index.d.ts",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

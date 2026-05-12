@@ -1,0 +1,67 @@
+.app-shell {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 4px 0 8px;
+  font-size: clamp(28px, 6vw, 44px);
+}
+
+.app-header p {
+  line-height: 1.7;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.demo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.result-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+.result-card h2 {
+  margin-top: 0;
+}
+
+.result-card dt {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.result-card dd {
+  margin: 4px 0 0;
+  word-break: break-all;
+  font-weight: 600;
+}
+
+@media (max-width: 850px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .demo-layout {
+    grid-template-columns: 1fr;
+  }
+}
